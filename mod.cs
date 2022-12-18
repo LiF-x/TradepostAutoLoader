@@ -26,7 +26,7 @@ package LiFxTradepostLoaderSelect
 
 // Set up all of the arrays
 // with default values
-function LiFxTradepostLoaderSelect::initArrays() {
+function LiFxTradepostLoaderSelect::initArrays(%this) {
 
    // Initialize single dimensional array
    // containing a list of names
@@ -35,16 +35,31 @@ function LiFxTradepostLoaderSelect::initArrays() {
    $Goodtrade[2] = exec("TradeOptions/GoodTrade.cs");
    $HiSelltrade[3] = exec("TradeOptions/HighsellTrade.cs");
    $LowSelltrade[4] = exec("TradeOptions/LowsellTrade.cs");
-   
+
+function setNames(%id, %name)
+{
+   // Our array only contains three elements:
+   // [0] [1] [2]
+   // If anything other than 0, - 4 is
+   // passed in, inform the user of an error
+   if(%id > 2 || %id < 0)
+   {
+      error("TradeFile " @ %id @ " out of range");
+      error("Please use 0 - 4 as the %id");
+   }
+   else
+      $names[%id] = %name;
+}
+
 function TriggerData(LiFxTradepostLoaderSelectTrigger)
 {
     local = 1;
-    tickPeriodMs = 10800;
+    tickPeriodMs = 3600000;
 };
 if(!isDefined("$LiFx::LiFxTradepostLoaderSelect::timeToTraderest"))
 {
   echo("Trade Refresh Timer not configured, setting default 3 hours");
-  $LiFx::LiFxTradepostLoaderSelect::timeToTraderest = 1; //1 = 3 hours
+  $LiFx::LiFxTradepostLoaderSelect::timeToTradereset = 2; //Set at refresh every 2 Hours / 1 = 1 hours
 }
    // Initialize for array
 
@@ -55,11 +70,11 @@ if(!isDefined("$LiFx::LiFxTradepostLoaderSelect::timeToTraderest"))
       echo(%i @ ": " @ $names[%i]);
     }
   }
-  function LiFxTradepostLoaderSelect::setTradeValue(%this)
+  function LiFxTradepostLoaderSelect::LoadFiles(%this)
 {
 
    // Set the Trade value
-   $Trade[%row, %column] = %this;
+   $Trade = %this;
 
    // Check to see if we have the same
    // three values in a row
