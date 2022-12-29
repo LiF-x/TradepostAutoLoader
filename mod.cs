@@ -244,7 +244,8 @@ dbi.Update("INSERT IGNORE nyu_tradepost_market VALUES (NULL, 'buy',  'flex', 749
 dbi.Update("INSERT IGNORE nyu_tradepost_market VALUES (NULL, 'buy',  'flex', 750, NULL, NULL, 80, 0, 11000, 3, 'timestamp', NULL, 1, 10, 1, 3, 0.25, 'timestamp')");
 dbi.Update("INSERT IGNORE nyu_tradepost_market VALUES (NULL, 'buy',  'flex', 246, NULL, NULL, 80, 0, 11000, 3, 'timestamp', NULL, 1, 10, 1, 5, 0.25, 'timestamp')"); //SNOW
 
-/* LiFx Knool Weapons Disabled */
+ // LiFx Knool Weapons ENABLED 
+ //sale
 dbi.Update("INSERT IGNORE `nyu_tradepost_market` VALUES (NULL, 'SELL', 'FIXED', 2465, NULL, NULL, 100, 0, 20000, 13000, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)");
 dbi.Update("INSERT IGNORE `nyu_tradepost_market` VALUES (NULL, 'SELL', 'FIXED', 2466, NULL, NULL, 100, 0, 20000, 12500, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)");
 dbi.Update("INSERT IGNORE `nyu_tradepost_market` VALUES (NULL, 'SELL', 'FIXED', 2464, NULL, NULL, 100, 0, 20000, 13200, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)");
@@ -252,6 +253,13 @@ dbi.Update("INSERT IGNORE `nyu_tradepost_market` VALUES (NULL, 'SELL', 'FIXED', 
 dbi.Update("INSERT IGNORE `nyu_tradepost_market` VALUES (NULL, 'SELL', 'FIXED', 2462, NULL, NULL, 100, 0, 20000, 15000, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)");
 dbi.Update("INSERT IGNORE `nyu_tradepost_market` VALUES (NULL, 'SELL', 'FIXED', 2461, NULL, NULL, 100, 0, 20000, 12000, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)");
 
+//buy
+dbi.Update("INSERT IGNORE nyu_tradepost_market VALUES (NULL, 'buy',  'flex', 2465, NULL, NULL, 10, 0, 5000, 3, 'timestamp', NULL, 1, 10, 1000, 8000, 0.25, 'timestamp')"); 
+dbi.Update("INSERT IGNORE nyu_tradepost_market VALUES (NULL, 'buy',  'flex', 2466, NULL, NULL, 10, 0, 5000, 3, 'timestamp', NULL, 1, 10, 1000, 8000, 0.25, 'timestamp')"); 
+dbi.Update("INSERT IGNORE nyu_tradepost_market VALUES (NULL, 'buy',  'flex', 2464, NULL, NULL, 10, 0, 5000, 3, 'timestamp', NULL, 1, 10, 1000, 8000, 0.25, 'timestamp')"); 
+dbi.Update("INSERT IGNORE nyu_tradepost_market VALUES (NULL, 'buy',  'flex', 2463, NULL, NULL, 10, 0, 5000, 3, 'timestamp', NULL, 1, 10, 1000, 8000, 0.25, 'timestamp')"); 
+dbi.Update("INSERT IGNORE nyu_tradepost_market VALUES (NULL, 'buy',  'flex', 2462, NULL, NULL, 10, 0, 5000, 3, 'timestamp', NULL, 1, 10, 1000, 8000, 0.25, 'timestamp')"); 
+dbi.Update("INSERT IGNORE nyu_tradepost_market VALUES (NULL, 'buy',  'flex', 2461, NULL, NULL, 10, 0, 5000, 3, 'timestamp', NULL, 1, 10, 1000, 8000, 0.25, 'timestamp')"); 
   }
 
   function LiFxTradepostAutoLoader::version() {
