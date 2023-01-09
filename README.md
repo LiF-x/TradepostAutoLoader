@@ -16,7 +16,8 @@
 ### Important Information
 
 Please note: This mod will remove any current trades you have set up and replace it with trades included in this mod.
- - This will also reapply at every restart if you wish to customise the trade template included, please rename the mod file to Dmod.cs to stop it reapplying trade deals and edit ingame as normal.
+ - This will also reset prices at every restart!
+ If you wish to customise the trade template included, please rename the mod file to Dmod.cs to stop it loading back up on the next restart and resetting trade deals then edit ingame as normal.
 
-
- If you wish to allow it to continue to reapply, This mod is designed to allow for flash Deals such as reduced prices for items which will reset back after a restart.
+ If you wish to allow it to continue to reset prices and trades leave it as "mod.cs"
+ - This mod is designed to allow for flash Deals such as reduced prices for items which will reset back after a restart.
