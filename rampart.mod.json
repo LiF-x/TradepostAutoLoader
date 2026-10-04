@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "TradepostAutoLoader",
+  "name": "TradepostAutoLoader",
+  "version": "1.0.0",
+  "description": "Auto-loads tradepost trade entries (and resets prices on every restart). Requires the `nyu_tradepost_market` table to exist in the DB before this mod runs.",
+  "authors": ["Warped Ibun"],
+  "source": { "repo": "LiF-x/TradepostAutoLoader", "commit": "4b819895ba2139b0bafb3582724b27aa63d91515" },
+  "baseline": { "gameBuild": "sha256:d47ef6156423f1226b6d07a1f31f81d3aa94bc460cc1ac76bcf7d7ef9c305d4a", "steamBuildId": "11261643" },
+  "license": "GPL-3.0-only",
+  "distribution": "hostable",
+  "dependencies": ["LiF-x/ServerAutoloader"],
+  "loadOrderHint": 200,
+  "loadOrderNote": "Truncates and repopulates the trade post market table on every boot, so it must run after whatever creates and owns that table.",
+  "files": {
+    "overlay": [
+      { "src": "mod.cs", "dest": "mods/TradepostAutoLoader/mod.cs" }
+    ],
+    "dataPatches": []
+  }
+}
